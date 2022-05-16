@@ -1,0 +1,31 @@
+//file comparing//
+#include <iostream>
+#include <string.h>
+#include <fstream>
+using namespace std;
+int main()
+{
+    char txt1[200],txt2[200];
+    ofstream outpt1;
+    outpt1.open("datafile1.dat"); 
+    
+    cout<<"Enter your Data in File 1"<<endl;
+    cin.getline(txt1,200);
+    outpt1<<txt1<<endl;
+    cout<<"File 2"<<endl;
+    ofstream outpt2;
+    outpt2.open("datafile2.dat");
+    
+    cout<<"Enter your Data in File 2"<<endl;
+    cin.getline(txt2,200);
+    outpt2<<txt2<<endl;
+    if(strcmp(txt1,txt2)==0)
+    {
+        cout<<"File data is same"<<endl;
+    }
+    else
+    {
+        cout<<"File Data is different"<<endl;
+    }
+    return 0;
+}
